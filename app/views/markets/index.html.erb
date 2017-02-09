@@ -1,0 +1,8 @@
+<h1>Farmer's Market</h1>
+<%= @markets.each do |market| %>
+  <p><%= market["market_name"] %></p>
+  <p><%= market["location"] %></p>
+  <% if market["market_link"] %>
+    <p><a href="<%= market["market_link"]["url"] %>">Visit!</a></p>
+  <% end %>
+<% end %>
